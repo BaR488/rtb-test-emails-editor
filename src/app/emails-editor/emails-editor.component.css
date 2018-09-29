@@ -19,6 +19,12 @@
   height: 23px;
 }
 
+:host .emailBlock.invalidEmail span{
+  text-decoration-line: underline;
+  text-decoration-color: red;
+  text-decoration-style: dashed;
+}
+
 :host .emailBlock i{
   font-style: normal;
   padding-left: 9px;
