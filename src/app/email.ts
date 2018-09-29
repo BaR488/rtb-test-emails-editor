@@ -12,5 +12,5 @@ export class Email {
 
   public get isValid(): boolean {
     return this.emailRegex.test(String(this._value).toLowerCase());
-  };
+  }
 }
