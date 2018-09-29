@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Email} from '../email';
 
 @Component({
@@ -31,6 +31,4 @@ export class EmailsEditorComponent implements OnInit {
       this.currentInputValue = null;
     }
   }
-
-
 }
