@@ -1,21 +1,23 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {Email} from '../email';
 
 @Component({
   selector: 'emails-editor',
   templateUrl: './emails-editor.component.html',
-  styleUrls: ['./emails-editor.component.css']
+  styleUrls: ['./emails-editor.component.css'],
 })
 export class EmailsEditorComponent implements OnInit {
 
-  emails: Array<Email>;
+  @Input()
+  emails: Array<Email> = [];
+
   currentInputValue: string;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.emails = [new Email(' sidorov@gmail.com')];
+    this.emails.push(new Email('sidorov@gmail.com'));
   }
 
   removeEmail(email: Email) {

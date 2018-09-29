@@ -1,4 +1,9 @@
-<h1>Share <b>Board name</b> with other</h1>
-<emails-editor></emails-editor>
-<button (click)="addEmail()">Add email</button>
-<button (click)="getEmailCount()">Get email count</button>
+<div class="sharedEmailsContainer">
+  <h3>Share <b>Board name</b> with other</h3>
+  <emails-editor [(emails)]="sharedEmails"></emails-editor>
+</div>
+<div class="buttonContainer">
+  <button (click)="addEmail()">Add email</button>
+  <button (click)="getEmailCount()">Get email count</button>
+</div>
+
