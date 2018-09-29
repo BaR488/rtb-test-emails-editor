@@ -1,14 +1,13 @@
-<div>
-  <span *ngFor="let email of emails">
-    {{email.value}}
-    <i (click)="removeEmail(email)">&#215;</i>
-  </span>
-  <input type="text"
-         placeholder="add more people..."
-         [(ngModel)]="currentInputValue"
-         (onEnter)="addNewEmail(currentInputValue)"
-         (onComma)="addNewEmail(currentInputValue)"
-         (focusout)="addNewEmail(currentInputValue)"
-         (paste)="addNewEmail($event.clipboardData.getData('Text')); $event.preventDefault()">
-</div>
+<span *ngFor="let email of emails" [ngClass]="{invalidEmail:!email.isValid}" class="emailBlock">
+  <span>{{email.value}}</span>
+  <i (click)="removeEmail(email)">×</i>
+</span>
+<input type="text"
+       placeholder="add more people..."
+       [(ngModel)]="currentInputValue"
+       (onEnter)="addNewEmail(currentInputValue)"
+       (onComma)="addNewEmail(currentInputValue)"
+       (focusout)="addNewEmail(currentInputValue)"
+       (paste)="addNewEmail($event.clipboardData.getData('Text')); $event.preventDefault()">
+
 
